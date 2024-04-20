@@ -1,10 +1,10 @@
 {
-  "name": "home",
+  "name": "checkout",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/home",
+  "sourceRoot": "apps/checkout",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project home --web",
+  "// targets": "to see all targets run: nx show project checkout --web",
   "targets": {
     "build": {
       "executor": "@nx/next:build",
@@ -14,13 +14,13 @@
         "scripts": true
       },
       "options": {
-        "root": "apps/home",
-        "outputPath": "dist/apps/home",
-        "tsConfig": "apps/home/tsconfig.app.json",
+        "root": "apps/checkout",
+        "outputPath": "dist/apps/checkout",
+        "tsConfig": "apps/checkout/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/home/public",
+            "input": "apps/checkout/public",
             "output": "/"
           }
         ]
@@ -35,9 +35,9 @@
     "serve": {
       "executor": "@nx/next:server",
       "options": {
-        "buildTarget": "home:build",
+        "buildTarget": "checkout:build",
         "dev": true,
-        "port": 3000
+        "port": 3001
       }
     }
   }
