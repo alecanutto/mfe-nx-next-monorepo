@@ -13,21 +13,21 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
-  webpack: (config, options) => {
-    if (!options.isServer) {
-      config.plugins.push(
-        new NextFederationPlugin({
-          name: 'checkout',
-          filename: 'static/chunks/remoteEntry.js',
-          remotes: [],
-          extraOptions: {},
-          exposes: {
-            './CheckoutPage': './src/pages/index.tsx',
-          },
-          shared: {},
-        })
-      );
-    }
+  webpack: (config) => {
+    config.plugins.push(
+      new NextFederationPlugin({
+        name: 'checkout',
+        filename: 'static/chunks/remoteEntry.js',
+        extraOptions: {
+          exposePages: true,
+        },
+        exposes: {
+          './Header': './src/components/Header.tsx',
+        },
+        shared: {},
+      })
+    );
+
     return config;
   },
 };
