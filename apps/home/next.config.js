@@ -14,20 +14,23 @@ const nextConfig = {
     svgr: false,
   },
   webpack: (config, options) => {
-    if (!options.isServer) {
-      config.plugins.push(
-        new NextFederationPlugin({
-          name: 'host',
-          filename: 'static/chunks/remoteEntry.js',
-          remotes: [],
-          extraOptions: {
-            debug: true,
-          },
-          exposes: {},
-          shared: {},
-        })
-      );
-    }
+    config.plugins.push(
+      new NextFederationPlugin({
+        name: 'host',
+        filename: 'static/chunks/remoteEntry.js',
+        remotes: {
+          '@mfe/checkout': `checkout@http://localhost:3001/_next/static/${
+            options.isServer ? 'ssr' : 'chunks'
+          }/remoteEntry.js`,
+        },
+        extraOptions: {
+          debug: true,
+        },
+        exposes: {},
+        shared: {},
+      })
+    );
+
     return config;
   },
 };
