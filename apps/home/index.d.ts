@@ -4,7 +4,3 @@ declare module '*.svg' {
   export const ReactComponent: any;
   export default content;
 }
-
-declare module '@mfe/checkout/Header'
-
-declare module '@mfe/checkout/pages/index'
