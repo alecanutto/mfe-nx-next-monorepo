@@ -1,4 +1,5 @@
 import styles from './index.module.css';
+import { Button } from '@mfe-nx-next-monorepo/shared';
 
 export function Teste() {
   return (
@@ -10,6 +11,15 @@ export function Teste() {
               <span> Hello there, </span>
               Welcome checkout page teste 👋
             </h1>
+            <Button
+              size="lg"
+              variant={'secondary'}
+              onClick={() => {
+                console.log('executou aqui');
+              }}
+            >
+              Teste Checkout
+            </Button>
           </div>
         </div>
       </div>
