@@ -1,8 +1,12 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import '../styles/globals.css';
+import { ThemeProvider } from '@mfe/shared/components';
+import { Inter } from 'next/font/google';
+import { init } from '@module-federation/runtime';
+import RootLayout from '../components/RootLayout';
 
-import { init } from '@module-federation/runtime'
+const inter = Inter({ subsets: ['latin'] });
 
 const remotes = (isServer: boolean) => {
   const location = isServer ? 'ssr' : 'chunks';
@@ -17,18 +21,25 @@ const remotes = (isServer: boolean) => {
 init({
   name: 'home',
   remotes: remotes(typeof window === 'undefined'),
-})
+});
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
       <Head>
-        <title>Welcome to home!</title>
+        <title>MFE Nextjs</title>
       </Head>
-      <main className="app">
-        <Component {...pageProps} />
+      <main className={inter.className}>
+        <RootLayout>
+          <Component {...pageProps} />
+        </RootLayout>
       </main>
-    </>
+    </ThemeProvider>
   );
 }
 

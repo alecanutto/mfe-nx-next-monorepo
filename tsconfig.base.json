@@ -10,14 +10,27 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@mfe-nx-next-monorepo/shared": ["packages/shared/src/index.ts"],
+      "@mfe/shared/components": [
+        "packages/shared/src/components/index"
+      ],
+      "@mfe/shared/ui": [
+        "packages/shared/src/components/ui/index"
+      ],
+      "@mfe/shared/utils": [
+        "packages/shared/src/lib/index"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

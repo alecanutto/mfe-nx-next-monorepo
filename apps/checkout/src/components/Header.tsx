@@ -1,21 +1,9 @@
-import React from 'react';
-
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header
-      style={{
-        backgroundColor: '#090909',
-        color: 'white',
-        height: '80px',
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-      }}
+      className="bg-gray-800 p-4 text-white flex justify-between items-center"
     >
-      Logo
-      <ul>
-        <li>Home</li>
-      </ul>
+      <h1 className="text-2xl">Checkout Header</h1>
     </header>
   );
 };

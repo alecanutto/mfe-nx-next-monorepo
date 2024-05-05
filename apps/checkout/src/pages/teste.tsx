@@ -1,28 +1,19 @@
-import styles from './index.module.css';
-import { Button } from '@mfe-nx-next-monorepo/shared';
+import { Button } from '@mfe/shared/ui';
 
 export function Teste() {
   return (
-    <div className={styles.page}>
-      <div className="wrapper">
-        <div className="container">
-          <div id="welcome">
-            <h1>
-              <span> Hello there, </span>
-              Welcome checkout page teste 👋
-            </h1>
-            <Button
-              size="lg"
-              variant={'secondary'}
-              onClick={() => {
-                console.log('executou aqui');
-              }}
-            >
-              Teste Checkout
-            </Button>
-          </div>
-        </div>
-      </div>
+    <div>
+      <h1 className="text-3xl text-sky-500">
+        <span> Hello there, </span>
+        Welcome checkout teste 👋
+      </h1>
+      <Button
+        className="mt-4"
+        size="lg"
+        variant="secondary"
+      >
+        Teste Checkout
+      </Button>
     </div>
   );
 }

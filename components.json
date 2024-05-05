@@ -9,7 +9,7 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "packages/shared/src/components",
-    "utils": "packages/shared/src/lib/utils"
+    "components": "@mfe/shared/components",
+    "utils": "@mfe/shared/utils"
   }
 }
