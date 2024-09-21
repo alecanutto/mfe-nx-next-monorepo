@@ -10,27 +10,18 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mfe/shared/components": [
-        "packages/shared/src/components/index"
+      "@mfe/next-catchall": [
+        "packages/next-catchall/src/index.ts"
       ],
-      "@mfe/shared/ui": [
-        "packages/shared/src/components/ui/index"
-      ],
-      "@mfe/shared/utils": [
-        "packages/shared/src/lib/index"
-      ]
+      "@mfe/shared/components": ["packages/shared/src/components/index.ts"],
+      "@mfe/shared/ui": ["packages/shared/src/components/ui/index.ts"],
+      "@mfe/shared/utils": ["packages/shared/src/lib/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
