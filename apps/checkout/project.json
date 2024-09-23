@@ -7,16 +7,19 @@
   "// targets": "to see all targets run: nx show project checkout --web",
   "targets": {
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@nx/rspack:rspack",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "sourceMap": {
         "scripts": true
       },
       "options": {
+        "rspackConfig": "apps/checkout/rspack.config.js",
+        "target": "web",
+        "main": "apps/checkout/src/pages/_app.tsx",
         "root": "apps/checkout",
         "outputPath": "dist/apps/checkout",
-        "tsConfig": "apps/checkout/tsconfig.app.json",
+        "tsConfig": "apps/checkout/tsconfig.json",
         "assets": [
           {
             "glob": "**/*",
@@ -33,7 +36,7 @@
       }
     },
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@nx/rspack:dev-server",
       "options": {
         "buildTarget": "checkout:build",
         "dev": true,
