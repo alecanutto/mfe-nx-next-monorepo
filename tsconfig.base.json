@@ -15,9 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mfe/next-catchall": [
-        "packages/next-catchall/src/index.ts"
-      ],
+      "@mfe/next-catchall": ["packages/next-catchall/src/index.ts"],
       "@mfe/shared/components": ["packages/shared/src/components/index.ts"],
       "@mfe/shared/ui": ["packages/shared/src/components/ui/index.ts"],
       "@mfe/shared/utils": ["packages/shared/src/lib/index.ts"]
