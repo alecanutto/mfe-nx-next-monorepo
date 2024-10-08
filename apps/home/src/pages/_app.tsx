@@ -3,7 +3,7 @@ import Head from 'next/head';
 import '../styles/globals.css';
 import { ThemeProvider } from '@mfe/shared/components';
 import { Inter } from 'next/font/google';
-import { init } from '@module-federation/runtime';
+import { init } from '@module-federation/enhanced/runtime';
 import RootLayout from '../components/RootLayout';
 
 const inter = Inter({ subsets: ['latin'] });

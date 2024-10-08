@@ -1,4 +1,4 @@
-import { loadRemote } from '@module-federation/runtime';
+import { loadRemote } from '@module-federation/enhanced/runtime';
 import dynamic from 'next/dynamic';
 
 interface ModuleWithDefaultExport {
