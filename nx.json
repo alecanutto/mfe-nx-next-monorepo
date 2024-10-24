@@ -54,5 +54,6 @@
       }
     }
   },
-  "nxCloudAccessToken": "NjMwYzQwZTgtYmYyZi00Mzg3LThmYzUtODc2MGJiZDZmY2YzfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "NjMwYzQwZTgtYmYyZi00Mzg3LThmYzUtODc2MGJiZDZmY2YzfHJlYWQtd3JpdGU=",
+  "useLegacyCache": true
 }
